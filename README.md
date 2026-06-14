@@ -4,6 +4,6 @@
 
 эволюция tea в мире программирования наглядно:
 <div align="center">
-  <img src="https://www.reddit.com/r/Classof09Game/comments/1fm1li5/what_would_nicole_today_think_of_her_teenage_self/">
+  <img src="https://preview.redd.it/what-would-nicole-today-think-of-her-teenage-self-art-by-v0-5t2xqa0xl5qd1.jpeg?auto=webp&s=76338814aa72e23395b9abcdbbf075799ce153df">
 </div>
 (к слову, нихуя не поменялось, терпеть)
