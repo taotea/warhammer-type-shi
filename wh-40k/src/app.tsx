@@ -6,7 +6,7 @@ export default function App() {
   return (
     <main class="w-full h-full text-base bg-dark text-light">
       <header class="text-4xl h-[7em] flex items-center justify-center">
-        <span class="w-min text-center">Adepta Sororitas ✟</span>
+        <span class="font-spectral w-min text-center font-extrabold-italic text-glow tracking-widest">Adepta Sororitas ✟</span>
       </header>
       {/* хернюшки красные */}
       <div class="grid auto-rows-fr auto-cols-fr mb-14">
