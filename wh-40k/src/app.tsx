@@ -16,30 +16,30 @@ export default function App() {
       <div class="grid auto-rows-fr auto-cols-fr mb-14">
         <Red
           class={"row-start-1"}
-          name="Name"
-          definition="Definition"
-          imgSrc="dwa"
+          name="Ритуальные одежды"
+          definition="Худи, футболки, плащи"
+          imgSrc="clothes.png "
           imgAlt="иконка"
         />
         <Red
           class={"row-start-1"}
-          name="Name"
-          definition="Definition"
-          imgSrc="dwa"
+          name="Символы веры"
+          definition="Кольца, кулоны, печати"
+          imgSrc="diamond.png"
           imgAlt="иконка"
         />
         <Red
           class={"row-start-2"}
-          name="Name"
-          definition="Definition"
-          imgSrc="dwa"
+          name="Алтарная утварь"
+          definition="Кружки, фляги"
+          imgSrc="cups.png"
           imgAlt="иконка"
-        />
+        /> 
         <Red
           class={"row-start-2"}
-          name="Name"
-          definition="Definition"
-          imgSrc="dwa"
+          name="Писания и книги"
+          definition="Артбуки, постеры, книги"
+          imgSrc="insert-nigger-picture-here"
           imgAlt="иконка"
         />
       </div>
