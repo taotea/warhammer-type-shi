@@ -46,7 +46,7 @@ export default function App() {
           class={"row-start-2"}
           name="Писания и книги"
           definition="Артбуки, постеры, книги"
-          imgSrc="insert-nigger-picture-here"
+          imgSrc="book.png"
           imgAlt="иконка"
         />
       </div>
@@ -79,8 +79,8 @@ export default function App() {
             name="Футболка с принтом Fleur de Lys"
             definition="Чёрная футболка с принтом Ордена. Никаких излишков."
             price="39,99$"
-            imgSrc="hude.png"
-            imgAlt="hudi"
+            imgSrc="t-shirt.png"
+            imgAlt="ts"
             onBuy={() => console.log("карточка 2")}
           />
           <Card_2
@@ -88,8 +88,8 @@ export default function App() {
             name="Чётки Адепта из чёрного дерева"
             definition="Чётки, выполненные из чёрного дерева вручную нашими мастерами. На концах дополнительно висят медали и крест."
             price="29,99$"
-            imgSrc="hude.png"
-            imgAlt="hudi"
+            imgSrc="adept.png"
+            imgAlt="ad"
             onBuy={() => console.log("карточка 2")}
           />
           <Card_2
@@ -97,8 +97,8 @@ export default function App() {
             name="Печать чистоты Adepta Sororitas"
             definition="Печать выполнена из натуральной краски и дополнена тканью с ручной гравировкой молитв. Купив Печать, Император будет вдохновлять и защищать вас."
             price="34,99$"
-            imgSrc="hude.png"
-            imgAlt="hudi"
+            imgSrc="seal-of-purity.png"
+            imgAlt="seal"
             onBuy={() => console.log("карточка 2")}
           />
           <Card_2
@@ -106,8 +106,8 @@ export default function App() {
             name="“Отряд Сестёр на перепутье с Хаосом”"
             definition="Постер-иллюстрация, выполненная на холсте, размер А2. Сзади прикреплен специальный держатель, если захочется повесить на стену. Значок Аквилы в подарок."
             price="24,99$"
-            imgSrc="hude.png"
-            imgAlt="hudi"
+            imgSrc="cool-picture.png"
+            imgAlt="picture"
             onBuy={() => console.log("карточка 2")}
           />
           <Card_2
@@ -115,16 +115,16 @@ export default function App() {
             name="Термокружка с гравировкой Ордена"
             definition="Термокружка, которая способна выдержать любые горячие напитки. Красивая гравировка выполнена вручную."
             price="39,99$"
-            imgSrc="hude.png"
-            imgAlt="hudi"
+            imgSrc="mega-cup.png"
+            imgAlt="cup"
             onBuy={() => console.log("карточка 2")}
           />
         </div>
       </div>
       {/* Лор */}
       <div id="lore">
-        <div class="bg-secondary -mx-2 text-center p-8 text-3xl/13">
-          † "Вера - наш щит. Ярость - наше оружие." †
+        <div class="bg-secondary -mx-2 text-center p-8 text-3xl/13 semibold-italic">
+          † "Вера - наш щит. Ярость - наше оружие." <div class="color-holy-yellow">†</div>
         </div>
         <img src="kimcha.png" alt="" />
         <p>
