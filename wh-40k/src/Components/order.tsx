@@ -10,7 +10,7 @@ export default function Order(
   return (
     <div
       class={
-        "m-1 mx-20 rounded-2xl text-sm bg-gray h-55 flex flex-col items-center text-center p-2 pt-0" +
+        "m-1 mx-5 rounded-2xl text-sm bg-gray h-55 flex flex-col items-center text-center p-2 pt-0" +
         " " +
         props.class
       }
