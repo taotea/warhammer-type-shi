@@ -23,30 +23,30 @@ export default function App() {
       <div class="grid auto-rows-fr auto-cols-fr mb-14">
         <Red
           class={"row-start-1"}
-          name="Name"
-          definition="Definition"
-          imgSrc="dwa"
+          name="Ритуальные одежды"
+          definition="Худи, футболки, плащи"
+          imgSrc="clothes.png "
           imgAlt="иконка"
         />
         <Red
           class={"row-start-1"}
-          name="Name"
-          definition="Definition"
-          imgSrc="dwa"
+          name="Символы веры"
+          definition="Кольца, кулоны, печати"
+          imgSrc="diamond.png"
           imgAlt="иконка"
         />
         <Red
           class={"row-start-2"}
-          name="Name"
-          definition="Definition"
-          imgSrc="dwa"
+          name="Алтарная утварь"
+          definition="Кружки, фляги"
+          imgSrc="cups.png"
           imgAlt="иконка"
-        />
+        /> 
         <Red
           class={"row-start-2"}
-          name="Name"
-          definition="Definition"
-          imgSrc="dwa"
+          name="Писания и книги"
+          definition="Артбуки, постеры, книги"
+          imgSrc="insert-nigger-picture-here"
           imgAlt="иконка"
         />
       </div>
@@ -76,45 +76,45 @@ export default function App() {
           />
           <Card_2
             class=""
-            name="Худи с капюшоном, вышивка Fleur de Lys"
-            definition="Худи, сшитое из натурального хлопка. По-середине стойкий принт символа Ордена."
-            price="59,99$"
+            name="Футболка с принтом Fleur de Lys"
+            definition="Чёрная футболка с принтом Ордена. Никаких излишков."
+            price="39,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
             onBuy={() => console.log("карточка 2")}
           />
           <Card_2
             class=""
-            name="Худи с капюшоном, вышивка Fleur de Lys"
-            definition="Худи, сшитое из натурального хлопка. По-середине стойкий принт символа Ордена."
-            price="59,99$"
-            imgSrc="hude.png"
-            imgAlt="hudi"
-            onBuy={() => console.log("карточка 2")}
-          />
-          <Card_22
-            class=""
-            name="Худи с капюшоном, вышивка Fleur de Lys"
-            definition="Худи, сшитое из натурального хлопка. По-середине стойкий принт символа Ордена."
-            price="59,99$"
+            name="Чётки Адепта из чёрного дерева"
+            definition="Чётки, выполненные из чёрного дерева вручную нашими мастерами. На концах дополнительно висят медали и крест."
+            price="29,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
             onBuy={() => console.log("карточка 2")}
           />
           <Card_2
             class=""
-            name="Худи с капюшоном, вышивка Fleur de Lys"
-            definition="Худи, сшитое из натурального хлопка. По-середине стойкий принт символа Ордена."
-            price="59,99$"
+            name="Печать чистоты Adepta Sororitas"
+            definition="Печать выполнена из натуральной краски и дополнена тканью с ручной гравировкой молитв. Купив Печать, Император будет вдохновлять и защищать вас."
+            price="34,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
             onBuy={() => console.log("карточка 2")}
           />
           <Card_2
             class=""
-            name="Худи с капюшоном, вышивка Fleur de Lys"
-            definition="Худи, сшитое из натурального хлопка. По-середине стойкий принт символа Ордена."
-            price="59,99$"
+            name="“Отряд Сестёр на перепутье с Хаосом”"
+            definition="Постер-иллюстрация, выполненная на холсте, размер А2. Сзади прикреплен специальный держатель, если захочется повесить на стену. Значок Аквилы в подарок."
+            price="24,99$"
+            imgSrc="hude.png"
+            imgAlt="hudi"
+            onBuy={() => console.log("карточка 2")}
+          />
+          <Card_2
+            class=""
+            name="Термокружка с гравировкой Ордена"
+            definition="Термокружка, которая способна выдержать любые горячие напитки. Красивая гравировка выполнена вручную."
+            price="39,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
             onBuy={() => console.log("карточка 2")}
