@@ -1,13 +1,20 @@
+import { createSignal, Show } from "solid-js";
 import "./app.css";
 import Card_1 from "./Components/card_1";
 import Card_2 from "./Components/card_2";
 import Order from "./Components/order";
 import Red from "./Components/Red";
+import { Motion, Presence } from "solid-motionone";
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = createSignal(false);
+
   return (
     <main class="w-full h-full text-base bg-dark text-light p-2">
-      <header class="text-4xl h-[7em] flex items-center justify-center">
+      <header
+        id="sanctuary"
+        class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('kimchonung.png')]"
+      >
         <span class="font-spectral w-min text-center font-extrabold-italic text-glow tracking-widest">
           Adepta Sororitas ✟
         </span>
@@ -51,11 +58,12 @@ export default function App() {
           price="59,99$"
           imgSrc="image.png"
           imgAlt="kurwa"
-        ></Card_1>
+          onBuy={() => console.log("карточка 1")}
+        />
       </div>
       {/* Наш ассортимент: */}
-      <div>
-        <span>Наш ассортимент:</span>
+      <div id="catalogue">
+        <p class="my-30 text-center text-5xl">Наш ассортимент:</p>
         <div class="flex flex-col gap-2">
           <Card_2
             class=""
@@ -64,6 +72,7 @@ export default function App() {
             price="59,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
+            onBuy={() => console.log("карточка 2")}
           />
           <Card_2
             class=""
@@ -72,6 +81,7 @@ export default function App() {
             price="59,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
+            onBuy={() => console.log("карточка 2")}
           />
           <Card_2
             class=""
@@ -80,6 +90,16 @@ export default function App() {
             price="59,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
+            onBuy={() => console.log("карточка 2")}
+          />
+          <Card_22
+            class=""
+            name="Худи с капюшоном, вышивка Fleur de Lys"
+            definition="Худи, сшитое из натурального хлопка. По-середине стойкий принт символа Ордена."
+            price="59,99$"
+            imgSrc="hude.png"
+            imgAlt="hudi"
+            onBuy={() => console.log("карточка 2")}
           />
           <Card_2
             class=""
@@ -88,6 +108,7 @@ export default function App() {
             price="59,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
+            onBuy={() => console.log("карточка 2")}
           />
           <Card_2
             class=""
@@ -96,20 +117,13 @@ export default function App() {
             price="59,99$"
             imgSrc="hude.png"
             imgAlt="hudi"
-          />
-          <Card_2
-            class=""
-            name="Худи с капюшоном, вышивка Fleur de Lys"
-            definition="Худи, сшитое из натурального хлопка. По-середине стойкий принт символа Ордена."
-            price="59,99$"
-            imgSrc="hude.png"
-            imgAlt="hudi"
+            onBuy={() => console.log("карточка 2")}
           />
         </div>
       </div>
       {/* Лор */}
-      <div>
-        <div class="bg-secondary">
+      <div id="lore">
+        <div class="bg-secondary -mx-2 text-center p-8 text-3xl/13">
           † "Вера - наш щит. Ярость - наше оружие." †
         </div>
         <img src="kimcha.png" alt="" />
@@ -145,7 +159,7 @@ export default function App() {
           Целестина, “Размышления о природе праведного возмездия”
         </p>
         <p>Основными Дочерними Орденами являются:</p>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center mb-30">
           <Order
             name={"Our Martyred Lady -\nФанатизм"}
             imgSrc="bloblo.png"
@@ -211,7 +225,10 @@ export default function App() {
         </p>
       </div>
       {/* Обратная связь */}
-      <div class="bg-linear-to-b from-[#433434] to-[#A98383] p-2 m-2 rounded-2xl">
+      <div
+        class="bg-linear-to-b from-[#433434] to-[#A98383] p-2 m-2 rounded-2xl"
+        id="puhelinnumero"
+      >
         <p class="text-center">ОБРАТНАЯ СВЯЗЬ</p>
         <p>Почта: defaduptus@gmail.com</p>
         <p>Телефон: +79989483645</p>
@@ -230,19 +247,49 @@ export default function App() {
         class="bg-secondary rounded-2xl fixed bottom-4.5 right-4.5"
       />
       {/* кнопка меню сверху слева */}
-      <img src="menu.svg" alt="меню" class="fixed top-4.5 left-4.5" />
+      <img
+        src="menu.svg"
+        alt="меню"
+        class="fixed top-4.5 left-4.5"
+        onClick={() => {
+          setMenuOpen(true);
+        }}
+      />
       {/* само меню */}
-      <div
-        class="fixed top-0 p-5 left-0 flex flex-col items-center h-75 w-60 
+      <Presence>
+        <Show when={menuOpen()}>
+          <Motion
+            class="fixed top-0 left-0 h-screen w-screen bg-dark/80"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+            initial={{ x: "-100%" }}
+            animate={{ x: "0%" }}
+            exit={{ x: "-100%" }}
+            transition={{ duration: 0.3 }}
+          >
+            <div
+              class="fixed top-0 p-5 left-0 flex flex-col items-center h-75 w-60 
                   justify-between bg-linear-to-b from-accent to-dark
-                  rounded-2xl rounded-bl-none rounded-tl-none text-xl hidden"
-      >
-        <div class="w-3/4 bg-light h-1" />
-        <p>Святилище</p>
-        <p>Каталог</p>
-        <p>Лор</p>
-        <p>Обратная Связь</p>
-      </div>
+                  rounded-2xl rounded-bl-none rounded-tl-none text-xl"
+            >
+              <div class="w-3/4 bg-light h-1" />
+              <p>
+                <a href="#sanctuary">Святилище</a>
+              </p>
+              <p>
+                <a href="#catalogue">Каталог</a>
+              </p>
+              <p>
+                <a href="#lore">Лор</a>
+              </p>
+              <p>
+                <a href="#puhelinnumero">Обратная Связь</a>
+              </p>
+            </div>
+          </Motion>
+        </Show>
+      </Presence>
     </main>
   );
 }

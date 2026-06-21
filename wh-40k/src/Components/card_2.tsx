@@ -7,6 +7,7 @@ export default function Card_2(
     imgSrc: string;
     imgAlt: string;
     price: string;
+    onBuy: () => void;
   },
 ): JSXElement {
   return (
@@ -30,7 +31,7 @@ export default function Card_2(
       </span>
       <div class="flex w-full px-5 justify-between items-center">
         <span class="text-xl">{props.price}</span>
-        <button class="text-5xl">+</button>
+        <button onClick={props.onBuy} class="text-5xl">+</button>
       </div>
     </div>
   );

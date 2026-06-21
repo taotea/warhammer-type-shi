@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;600;700&display=swap');    
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;600;700&display=swap');
 
 @theme {
     --font-spectral: "Spectral SC", "Times New Roman", serif;
-    --color-holy-yellow:#6D620D;
+    --color-holy-yellow: #6D620D;
     --color-accent: #912A2C;
     --color-secondary: #431414;
     --color-light: #E6E3E3;
@@ -11,14 +11,18 @@
     --color-gray: #362F2F;
 }
 
-@layer utilities{
-    .text-glow{
+@layer utilities {
+    .text-glow {
         text-shadow: 0 0 20px #6d620d, 0 0 40px #6d620d, 0 0 60px #6d620d;
     }
 }
 
-@layer base{
-    .font-spectral{
+@layer base {
+    .font-spectral {
         font-family: 'Spectral SC', serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
     }
 }
