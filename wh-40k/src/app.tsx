@@ -8,7 +8,9 @@ export default function App() {
   return (
     <main class="w-full h-full text-base bg-dark text-light p-2">
       <header class="text-4xl h-[7em] flex items-center justify-center">
-        <span class="font-spectral w-min text-center font-extrabold-italic text-glow tracking-widest">Adepta Sororitas ✟</span>
+        <span class="font-spectral w-min text-center font-extrabold-italic text-glow tracking-widest">
+          Adepta Sororitas ✟
+        </span>
       </header>
       {/* хернюшки красные */}
       <div class="grid auto-rows-fr auto-cols-fr mb-14">
@@ -222,7 +224,25 @@ export default function App() {
         </p>
       </div>
       {/* корзина */}
-      <img src="cart.svg" alt="корзина" class="bg-secondary rounded-2xl fixed bottom-4.5 right-4.5"/>
+      <img
+        src="cart.svg"
+        alt="корзина"
+        class="bg-secondary rounded-2xl fixed bottom-4.5 right-4.5"
+      />
+      {/* кнопка меню сверху слева */}
+      <img src="menu.svg" alt="меню" class="fixed top-4.5 left-4.5" />
+      {/* само меню */}
+      <div
+        class="fixed top-0 p-5 left-0 flex flex-col items-center h-75 w-60 
+                  justify-between bg-linear-to-b from-accent to-dark
+                  rounded-2xl rounded-bl-none rounded-tl-none text-xl hidden"
+      >
+        <div class="w-3/4 bg-light h-1" />
+        <p>Святилище</p>
+        <p>Каталог</p>
+        <p>Лор</p>
+        <p>Обратная Связь</p>
+      </div>
     </main>
   );
 }
