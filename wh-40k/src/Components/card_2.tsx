@@ -1,6 +1,6 @@
 import { JSX, JSXElement } from "solid-js";
 
-export default function Card_1(
+export default function Card_2(
   props: JSX.HTMLAttributes<HTMLDivElement> & {
     name: string;
     definition: string;
@@ -28,10 +28,10 @@ export default function Card_1(
       <span class="mb-1 block whitespace-pre-wrap text-[12px]">
         {props.definition}
       </span>
-      <span class="text-[#CEDA25] text-xl">{props.price}</span>
-      <button class="text-[#CABE36] text-xl block w-max bg-[#5D551A] px-7 border-black border">
-        Купить
-      </button>
+      <div class="flex w-full px-5 justify-between items-center">
+        <span class="text-xl">{props.price}</span>
+        <button class="text-5xl">+</button>
+      </div>
     </div>
   );
 }
