@@ -2,8 +2,8 @@ import { JSX, JSXElement } from "solid-js";
 
 export default function Card_1(
   props: JSX.HTMLAttributes<HTMLDivElement> & {
-    name: JSX.Element;
-    definition: JSX.Element;
+    name: string;
+    definition: string;
     imgSrc: string;
     imgAlt: string;
     price: string;
