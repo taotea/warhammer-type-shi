@@ -75,7 +75,7 @@ export default function App() {
       </div>
       {/* Наш ассортимент: */}
       <div id="catalogue">
-        <p class="my-30 text-center text-5xl font-spectral">Наш ассортимент:</p>
+        <p class="my-30 text-center text-5xl font-spectral-cs">Наш ассортимент:</p>
         <div class="flex flex-col gap-2">
           <Card_2
             class=""
@@ -139,7 +139,7 @@ export default function App() {
       {/* Лор */}
       <div id="lore">
         <div class="bg-secondary -mx-2 text-center p-8 text-3xl/13 semibold-italic">
-          <span class="text-yellow-300">†</span> "Вера - наш щит. Ярость - наше оружие." <span class="text-yellow-300">†</span>
+          <span class="text-yellow-300">†</span> <span class="font-spectral-cs">"Вера - наш щит. Ярость - наше оружие."</span><span class="text-yellow-300">†</span>
         </div>
         <img src="kimcha.png" alt="" />
         <p>
