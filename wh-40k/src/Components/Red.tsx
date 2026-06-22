@@ -12,14 +12,14 @@ export default function Red(
   return (
     <div
       class={
-        "bg-linear-to-b from-accent to-secondary m-1 rounded-2xl text-center text-sm" +
+        "bg-linear-to-b from-accent to-secondary m-1 rounded-2xl text-center text-sm w-65 h-42" +
         " " +
         props.class
       }
     >
       <img src={props.imgSrc} alt={props.imgAlt} class="mb-1.5 mx-auto block" />
-      <span class="mb-2 block">{props.name}</span>
-      <span class="mb-9 block">{props.definition}</span> // меняй тут
+      <span class="mb-2 block font-spectral-cs text-2xl font-bold">{props.name}</span>
+      <span class="mb-9 block text-1xl font-italic text-glow">{props.definition}</span>
     </div>
   );
 }

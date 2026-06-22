@@ -13,47 +13,40 @@ export default function App() {
     <main class="w-full h-full text-base bg-dark text-light p-2">
       <header
         id="sanctuary"
-        class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('kimchonung.png')]"
+        class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('kimchonung.png')] lg:bg-[url('dev.png')]"
       >
-        <span class="w-min text-center font-extrabold-italic text-glow tracking-widest font-spectral-cs text-6xl">
-          Adepta Sororitas ✟
-        </span>
+        <span class="w-min text-center font-bold italic text-glow tracking-widest font-spectral-cs text-6xl">Adepta Sororitas </span> 
+        <br></br>
+        <span class="w-min text-center font-medium text-glow tracking-widest font-spectral-cs text-6xl">✟</span>
+        
       </header>
       {/* хернюшки красные */}
-      <div class="grid auto-rows-fr auto-cols-fr mb-14">
+      <div class="grid auto-rows-fr auto-cols-fr mb-14 lg:flex lg:items-center lg:justify-center lg:gap-2">
         <Red
           class={"row-start-1"}
-          name={
-            <span class="font-spectral-cs text-2xl font-bold text-white">
-              Ритуальные одежды
-            </span>
-          }
-          definition={<span class="text-1xl font-italic text-glow">Худи, футболки, плащи</span>}
+          name="Ритуальные одежды"
+          definition="Худи, футболки, плащи"
           imgSrc="clothes.png"
           imgAlt="иконка"
         />
         <Red
           class={"row-start-1"}
-          name={<span class="font-spectral-cs text-2xl font-bold">Символы веры</span>}
-          definition={<span class="text-1xl font-italic text-glow">Кольца, кулоны, печати</span>}
+          name="Символы веры"
+          definition="Кольца, кулоны, печати"
           imgSrc="diamond.png"
           imgAlt="иконка"
         />
         <Red
           class={"row-start-2"}
-          name={
-            <span class="font-spectral-cs text-2xl font-bold text-white">
-              Алтарная утварь
-            </span>
-          }
-          definition={<span class="text-1xl font-italic text-glow">Кружки, фляги</span>}
+          name="Алтарная утварь"
+          definition="Кружки, фляги"
           imgSrc="cups.png"
           imgAlt="иконка"
         /> 
         <Red
           class={"row-start-2"}
-          name={<span class="font-spectral-cs text-2xl font-bold">Писания и книги</span>}
-          definition={<span class="text-1xl font-italic text-glow">Артбуки, постеры, книги</span>}
+          name="Писания и книги"
+          definition="Артбуки, постеры, книги"
           imgSrc="book.png"
           imgAlt="иконка"
         />
@@ -62,11 +55,7 @@ export default function App() {
       <div>
         <Card_1
           definition="Дуо культовых книг за авторством Джеймса Сваллоу"
-          name={
-            <span class="font-bold text-xl font-spectral-cs">
-              {"“Вера и Пламя”\n“Молот и Наковальня”"}
-            </span>
-          }
+          name={"“Вера и Пламя”\n“Молот и Наковальня”"}
           price="59,99$"
           imgSrc="image.png"
           imgAlt="kurwa"

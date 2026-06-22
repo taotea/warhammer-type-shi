@@ -23,7 +23,7 @@ export default function Card_1(
         src={props.imgSrc}
         alt={props.imgAlt}
       />
-      <span class="mb-1 block whitespace-pre-wrap font-bold text-xl">
+      <span class="mb-1 block whitespace-pre-wrap font-bold text-xl font-bold text-xl font-spectral-cs">
         {props.name}
       </span>
       <span class="mb-1 block whitespace-pre-wrap text-[12px]">
