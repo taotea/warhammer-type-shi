@@ -15,7 +15,7 @@ export default function App() {
         id="sanctuary"
         class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('kimchonung.png')]"
       >
-        <span class="font-spectral w-min text-center font-extrabold-italic text-glow tracking-widest">
+        <span class="w-min text-center font-extrabold-italic text-glow tracking-widest font-spectral-cs text-6xl">
           Adepta Sororitas ✟
         </span>
       </header>
@@ -23,29 +23,37 @@ export default function App() {
       <div class="grid auto-rows-fr auto-cols-fr mb-14">
         <Red
           class={"row-start-1"}
-          name="Ритуальные одежды"
-          definition="Худи, футболки, плащи"
+          name={
+            <span class="font-spectral-cs text-2xl font-bold text-white">
+              Ритуальные одежды
+            </span>
+          }
+          definition={<span class="text-1xl font-italic text-glow">Худи, футболки, плащи</span>}
           imgSrc="clothes.png"
           imgAlt="иконка"
         />
         <Red
           class={"row-start-1"}
-          name="Символы веры"
-          definition="Кольца, кулоны, печати"
+          name={<span class="font-spectral-cs text-2xl font-bold">Символы веры</span>}
+          definition={<span class="text-1xl font-italic text-glow">Кольца, кулоны, печати</span>}
           imgSrc="diamond.png"
           imgAlt="иконка"
         />
         <Red
           class={"row-start-2"}
-          name="Алтарная утварь"
-          definition="Кружки, фляги"
+          name={
+            <span class="font-spectral-cs text-2xl font-bold text-white">
+              Алтарная утварь
+            </span>
+          }
+          definition={<span class="text-1xl font-italic text-glow">Кружки, фляги</span>}
           imgSrc="cups.png"
           imgAlt="иконка"
         /> 
         <Red
           class={"row-start-2"}
-          name="Писания и книги"
-          definition="Артбуки, постеры, книги"
+          name={<span class="font-spectral-cs text-2xl font-bold">Писания и книги</span>}
+          definition={<span class="text-1xl font-italic text-glow">Артбуки, постеры, книги</span>}
           imgSrc="book.png"
           imgAlt="иконка"
         />
@@ -54,7 +62,11 @@ export default function App() {
       <div>
         <Card_1
           definition="Дуо культовых книг за авторством Джеймса Сваллоу"
-          name={"“Вера и Пламя”\n“Молот и Наковальня”"}
+          name={
+            <span class="font-bold text-xl font-spectral-cs">
+              {"“Вера и Пламя”\n“Молот и Наковальня”"}
+            </span>
+          }
           price="59,99$"
           imgSrc="image.png"
           imgAlt="kurwa"
@@ -63,7 +75,7 @@ export default function App() {
       </div>
       {/* Наш ассортимент: */}
       <div id="catalogue">
-        <p class="my-30 text-center text-5xl">Наш ассортимент:</p>
+        <p class="my-30 text-center text-5xl font-spectral">Наш ассортимент:</p>
         <div class="flex flex-col gap-2">
           <Card_2
             class=""
@@ -236,10 +248,12 @@ export default function App() {
         class="bg-linear-to-b from-[#433434] to-[#A98383] p-2 m-2 rounded-2xl"
         id="puhelinnumero"
       >
+        <span class="font-spectral-cs">
         <p class="text-center">ОБРАТНАЯ СВЯЗЬ</p>
         <p>Почта: defaduptus@gmail.com</p>
         <p>Телефон: +79989483645</p>
         <p>Telegram: @killyourself_dept</p>
+        </span>
         <p>======================================</p>
         <p>
           Возникли проблемы во время или после покупки? Напишите нам и

@@ -3,8 +3,8 @@ import { JSX } from "solid-js/h/jsx-runtime";
 
 export default function Red(
   props: JSX.HTMLAttributes<HTMLDivElement> & {
-    name: string;
-    definition: string;
+    name: JSX.Element;
+    definition: JSX.Element;
     imgSrc: string;
     imgAlt: string;
   },
