@@ -13,7 +13,7 @@ export default function App() {
     <main class="w-full h-full text-base bg-dark text-light p-2">
       <header
         id="sanctuary"
-        class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('kimchonung.png')] lg:bg-[url('dev.png')]"
+        class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('dev.png')] bg-position-[center_top_-7rem]"
       >
         <span class="w-min text-center font-bold italic text-glow tracking-widest font-spectral-cs text-6xl">Adepta Sororitas </span> 
         <br></br>
