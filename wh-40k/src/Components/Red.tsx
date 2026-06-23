@@ -12,7 +12,7 @@ export default function Red(
   return (
     <div
       class={
-        "bg-linear-to-b from-accent to-secondary m-1 rounded-2xl text-center text-sm w-65 h-42" +
+        "bg-linear-to-b from-accent to-secondary m-1 rounded-2xl text-center text-sm lg:w-65 lg:h-42" +
         " " +
         props.class
       }
