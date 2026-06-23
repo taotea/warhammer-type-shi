@@ -1,4 +1,4 @@
-import { createEffect, createSignal, Show } from "solid-js";
+import { createEffect, createSignal, For, Show } from "solid-js";
 import "./app.css";
 import Card_1 from "./Components/card_1";
 import Card_2 from "./Components/card_2";
@@ -12,6 +12,23 @@ export default function App() {
   const [menuOpen, setMenuOpen] = createSignal(false);
   const [cartOpen, setCartOpen] = createSignal(false);
   const [cart, setCart] = createStore<Product[]>([]);
+  const groupedCart = () => {
+    const groups = new Map<string, { item: Product; count: number }>();
+    for (const item of cart) {
+      if (groups.has(item.name)) {
+        groups.get(item.name)!.count++;
+      } else {
+        groups.set(item.name, { item, count: 1 });
+      }
+    }
+    return [...groups.values()];
+  };
+  const removeOne = (name: string) => {
+    const idx = cart.findIndex((p) => p.name === name);
+    if (idx !== -1) {
+      setCart(cart.filter((_, i) => i !== idx));
+    }
+  };
 
   return (
     <main class="w-full h-full text-base bg-dark text-light p-2">
@@ -19,8 +36,9 @@ export default function App() {
         id="sanctuary"
         class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('dev.png')] bg-position-[center_top_-7rem]"
       >
-        <span class="w-min text-center font-bold italic text-glow tracking-widest font-spectral-cs text-5xl">Adepta Sororitas <span class="font-medium">✟</span></span> 
-        
+        <span class="w-min text-center font-bold italic text-glow tracking-widest font-spectral-cs text-5xl">
+          Adepta Sororitas <span class="font-medium">✟</span>
+        </span>
       </header>
       {/* хернюшки красные */}
       <div class="grid auto-rows-fr auto-cols-fr mb-14 lg:flex lg:items-center lg:justify-center lg:gap-2">
@@ -373,8 +391,68 @@ export default function App() {
       {/* всплывашка корзины */}
       <Presence>
         <Show when={cartOpen()}>
-          <Motion class="fixed bottom-5 right-5 h-50 w-50 bg-accent">
-            
+          <Motion
+            class="fixed h-screen w-screen top-0 left-0"
+            onClick={() => setCartOpen(false)}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div
+              class="fixed bottom-16 right-5 w-85 bg-light text-dark rounded-2xl shadow-2xl flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* список товаров */}
+              <div class="overflow-y-auto max-h-64 px-5 pt-5 pb-2">
+                <For
+                  each={groupedCart()}
+                  fallback={
+                    <p class="text-center text-gray-400 py-6 font-spectral-cs italic text-lg">
+                      Здесь ничего нет
+                    </p>
+                  }
+                >
+                  {({ item, count }) => (
+                    <div class="flex items-center gap-1 py-1">
+                      <span class="shrink-0 font-spectral-cs font-bold italic text-sm whitespace-nowrap">
+                        {item.name.replace(/\n/g, " ")}, {count} шт.,
+                      </span>
+                      <span class="flex-1 border-b-2 border-dotted border-dark/40 mb-px" />
+                      <span class="shrink-0 font-spectral-cs font-bold italic text-sm whitespace-nowrap">
+                        {(item.price * count).toFixed(2)}$
+                      </span>
+                      <button
+                        onClick={() => removeOne(item.name)}
+                        class="shrink-0 ml-1 w-5 h-5 flex items-center justify-center rounded-full
+             bg-dark/10 hover:bg-red-200 text-dark/40 hover:text-red-600
+             transition-colors text-sm font-bold leading-none"
+                      >
+                        −
+                      </button>
+                    </div>
+                  )}
+                </For>
+              </div>
+
+              {/* итог + кнопка */}
+              <div class="px-5 py-4 border-t border-dark/20 flex flex-col gap-2">
+                <Show when={cart.length > 0}>
+                  <div class="flex justify-between font-spectral-cs font-bold italic text-sm">
+                    <span>Итого:</span>
+                    <span>
+                      {cart
+                        .reduce((sum, item) => sum + item.price, 0)
+                        .toFixed(2)}
+                      $
+                    </span>
+                  </div>
+                </Show>
+                <button class="w-full py-3 bg-dark text-light font-spectral-cs font-bold italic text-xl tracking-widest rounded-xl hover:bg-accent transition-colors duration-200">
+                  Оплатить
+                </button>
+              </div>
+            </div>
           </Motion>
         </Show>
       </Presence>
