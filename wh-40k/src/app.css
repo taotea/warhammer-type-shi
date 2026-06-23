@@ -22,6 +22,8 @@
     --color-light: #E6E3E3;
     --color-dark: #161616;
     --color-gray: #362F2F;
+    --color-brown: #221A1A;
+    --color-red: #281212;
 }
 
 @layer utilities {

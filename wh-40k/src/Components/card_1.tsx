@@ -15,7 +15,7 @@ export default function Card_1(
   return (
     <div
       class={
-        "m-1 rounded-2xl text-sm bg-gray h-104 flex flex-col items-center text-center p-2" +
+        "m-1 rounded-2xl text-sm bg-gray h-104 flex flex-col items-center text-center p-2 w-100" +
         " " +
         props.class
       }
@@ -25,10 +25,10 @@ export default function Card_1(
         src={props.imgSrc}
         alt={props.imgAlt}
       />
-      <span class="mb-1 block whitespace-pre-wrap font-bold text-xl font-spectral-cs">
+      <span class="mb-1 block whitespace-pre-wrap font-bold text-[19px] font-spectral-cs">
         {props.name}
       </span>
-      <span class="mb-1 block whitespace-pre-wrap text-[12px]">
+      <span class="mb-1 block whitespace-pre-wrap text-[14px]">
         {props.definition}
       </span>
       <span class="text-[#CEDA25] text-xl">{props.price}</span>

@@ -34,9 +34,9 @@ export default function App() {
     <main class="w-full h-full text-base bg-dark text-light p-2">
       <header
         id="sanctuary"
-        class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('dev.png')] bg-position-[center_top_-7rem]"
+        class="mb-4 -m-2 text-5xl h-[7em] flex items-center justify-center bg-[url('dev.png')] bg-position-[center_top_-7rem]"
       >
-        <span class="w-min text-center font-bold italic text-glow tracking-widest font-spectral-cs text-5xl">
+        <span class="w-min text-center lg:whitespace-nowrap font-bold italic text-glow tracking-widest font-spectral-cs lg:text-8xl">
           Adepta Sororitas <span class="font-medium">✟</span>
         </span>
       </header>
@@ -72,7 +72,7 @@ export default function App() {
         />
       </div>
       {/* карточка */}
-      <div>
+      <div class="flex flex-col items-center justify-center gap-2 lg:flex-row lg:gap-20">
         <Card_1
           definition="Дуо культовых книг за авторством Джеймса Сваллоу"
           name={"“Вера и Пламя”\n“Молот и Наковальня”"}
@@ -87,15 +87,44 @@ export default function App() {
             });
           }}
         />
+        <Card_1
+          definition="Культовая печать с Лилией и молитвами"
+          name={"Печать чистоты \n “Адепта Сороритас”"}
+          price="39,99$"
+          imgSrc="ze-claim.png"
+          imgAlt="kurwa"
+          onBuy={() => {
+            setCart(cart.length, {
+              name: "“Вера и Пламя”\n“Молот и Наковальня”",
+              definition: "Дуо культовых книг за авторством Джеймса Сваллоу",
+              price: 59.99,
+            });
+          }}
+        />
+        <Card_1
+          definition="Кулон с гильзой от болтера"
+          name={"Реликвалий Болтера"}
+          price="9,99$"
+          imgSrc="bolter.png"
+          imgAlt="kurwa"
+          onBuy={() => {
+            setCart(cart.length, {
+              name: "“Вера и Пламя”\n“Молот и Наковальня”",
+              definition: "Дуо культовых книг за авторством Джеймса Сваллоу",
+              price: 59.99,
+            });
+          }}
+        />
       </div>
+      
       {/* Наш ассортимент: */}
-      <div id="catalogue">
+      <div id="catalogue" class="lg:text-center">
         <p class="my-30 text-center text-5xl font-spectral-cs">
           Наш ассортимент:
         </p>
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2 lg:grid lg:grid-col-2 lg:gap-5 lg:w-250 lg:m-auto lg:gap-35">
           <Card_2
-            class=""
+            class="col-start-1"
             name="Худи с капюшоном, вышивка Fleur de Lys"
             definition="Худи, сшитое из натурального хлопка. По-середине стойкий принт символа Ордена."
             price="59,99$"
@@ -111,7 +140,7 @@ export default function App() {
             }
           />
           <Card_2
-            class=""
+            class="col-start-2"
             name="Футболка с принтом Fleur de Lys"
             definition="Чёрная футболка с принтом Ордена. Никаких излишков."
             price="39,99$"
@@ -127,7 +156,7 @@ export default function App() {
             }
           />
           <Card_2
-            class=""
+            class="col-start-1"
             name="Чётки Адепта из чёрного дерева"
             definition="Чётки, выполненные из чёрного дерева вручную нашими мастерами. На концах дополнительно висят медали и крест."
             price="29,99$"
@@ -143,7 +172,7 @@ export default function App() {
             }
           />
           <Card_2
-            class=""
+            class="col-start-2"
             name="Печать чистоты Adepta Sororitas"
             definition="Печать выполнена из натуральной краски и дополнена тканью с ручной гравировкой молитв. Купив Печать, Император будет вдохновлять и защищать вас."
             price="34,99$"
@@ -159,7 +188,7 @@ export default function App() {
             }
           />
           <Card_2
-            class=""
+            class="col-start-1"
             name="“Отряд Сестёр на перепутье с Хаосом”"
             definition="Постер-иллюстрация, выполненная на холсте, размер А2. Сзади прикреплен специальный держатель, если захочется повесить на стену. Значок Аквилы в подарок."
             price="24,99$"
@@ -175,7 +204,7 @@ export default function App() {
             }
           />
           <Card_2
-            class=""
+            class="col-start-2"
             name="Термокружка с гравировкой Ордена"
             definition="Термокружка, которая способна выдержать любые горячие напитки. Красивая гравировка выполнена вручную."
             price="39,99$"
@@ -196,7 +225,7 @@ export default function App() {
       <br></br>
 
       {/* Лор */}
-      <div id="lore">
+      <div id="lore" class="bg-[#281212] rounded-xl lg:w-1/2 lg:m-auto lg:p-10">
         <div class="bg-secondary -mx-2 text-center p-8 text-3xl/13 semibold-italic">
           <span class="text-yellow-300">†</span>{" "}
           <span class="font-spectral-cs">
@@ -204,12 +233,14 @@ export default function App() {
           </span>
           <span class="text-yellow-300">†</span>
         </div>
-        <img src="kimcha.png" alt="" />
-        <p>
+        <br></br>
+        <img src="soldier-1.png" alt="" class="m-auto lg:w-250"/>
+        <br></br>
+        <p class="text-center">
           <span class="text-yellow-300">Adepta Sororitas</span>, еще называемые{" "}
           <span class="text-yellow-300">Сёстрами Битвы</span> - женское воинство
           Экклезиархии, элита Империума, “Святое Войско”. НЕ путать с
-          <span class="text-red-500">Космодесантниками</span>, Сёстры - это иная
+          <span class="text-red-500"> Космодесантниками</span>, Сёстры - это иная
           фракция, которая не подчиняется Астартес. После восстания Себастьяна
           Тора, указом <span class="text-yellow-300">Императора</span> было
           запрещено содержать мужские армии под контролем Церкви. Но правилами
@@ -220,19 +251,21 @@ export default function App() {
           Хаоса. Их орудия и невероятная фанатичность сеет страх и ужас в глазах
           врага.
         </p>
-        <img src="chubaka.png" alt="" />
-        <p>
+        <br></br>
+        <img src="soldier-2.png" alt="" class="lg:ml-4 lg:w-120 lg:float-left lg:h-65" />
+        <p class="text-center text-md lg:text-right">
           Как и космодесант, Сёстры любят оружие помощнее и побольше. Их
           излюбленные оружия, ласково называемые “троицей”:{" "}
           <span class="text-yellow-300">Мельта</span> (плазма),
-          <span class="text-yellow-300">Огнемёт</span> и{" "}
+          <span class="text-yellow-300"> Огнемёт</span> и{" "}
           <span class="text-yellow-300">Священный Болтер</span> - стрелковое
           оружие с гигантским калибром, чаще всего с освящёнными боеприпасами на
           борту.
         </p>
-        <img src="bumbum.png" alt="" />
-        <p>
-          <span class="text-yellow-300 font-bold">
+        <br></br>
+        <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto"/>
+        <p class="">
+          <span class="text-yellow-300 font-medium italic">
             “Враги Императора настолько осквернены, что не замечают ужаса и
             ущербности своих собственных жалких жизней. Убийство настолько
             опустившихся существ может показаться актом милосердия, кровавым
@@ -241,34 +274,41 @@ export default function App() {
             человечества и не думайте о врагах, которых вы убиваете, ни в каком
             другом ключе, кроме как о жертвах во имя Его вечной славы.”
           </span>{" "}
-          - <span class="text-yellow-300"> Святая Целестина</span>, “Размышления
+          - <span class="text-yellow-200"> Святая Целестина</span>, “Размышления
           о природе праведного возмездия”
         </p>
         <br></br>
         <p>Основными Дочерними Орденами являются:</p>
-        <div class="flex flex-col items-center mb-30">
+        <br></br>
+        <div class="flex flex-col items-center mb-30 gap-5 lg:grid lg:grid-col-2 lg:gap-5 lg:w-210 lg:m-auto">
           <Order
+            class="col-start-1"
             name={"Our Martyred Lady -\nФанатизм"}
             imgSrc="martyred-lady.png"
             imgAlt="kurwa ya perdole"
           />
           <Order
+            class="col-start-2"
             name={"Ebon Chalice -\nЧистота"}
             imgSrc="ebon.png"
             imgAlt="kurwa ya perdole"
           />
           <Order
+            class="col-start-1"
             name={"Sacred Rose -\nСпокойствие"}
             imgSrc="sacred-rose.png"
             imgAlt="kurwa ya perdole"
           />
           <Order
+            class="col-start-2"
             name={"Bloody Rose -\nЯрость"}
             imgSrc="bloody-rose.png"
             imgAlt="kurwa ya perdole"
           />
         </div>
-        <img src="chupapi.png" alt="" />
+        <br></br>
+        <br></br>
+        <img src="simbol.png" alt="" class="lg:float-right m-auto"/>
         <p>
           Символ Ордена - <span class="text-yellow-300">Fleur de Lys</span>{" "}
           (Лилия), означающая чистоту и жертвенность. Сам по себе символ крайне
@@ -276,7 +316,10 @@ export default function App() {
           монархией, чистотой и королевской властью. Но во вселенной Warhammer
           40K его в основном ассоциируют именно с Сёстрами Битвы.
         </p>
-        <img src="jutjut.png" alt="" />
+        <br></br>
+        <br></br>
+        <br></br>
+        <img src="serafim.png" alt="" class="lg:w-85 lg:float-right"/>
         <p>
           Войска Сестёр Битвы тоже по-своему разнообразны.{" "}
           <span class="text-yellow-300">Серафимы</span>, например, являются
@@ -284,30 +327,32 @@ export default function App() {
           Их цель - устрашать врага внезапным появлением, давая другим отрядам
           сестёр окно для стрельбы на поражение.
         </p>
-        <img src="munana.png" alt="" />
-        <p>
+        <br></br>
+        <br></br>
+        <img src="retr.png" alt="" class="lg:w-80 lg:float-left lg:h-90 m-auto"/>
+        <p class="lg:text-end">
           <span class="text-yellow-300">Воздаятельницы</span> - безумно
           интересная часть Адепта. Их рутина по выкашиванию ереси
-          специализируется на работе с Тяжёлыми Болтерами, Огнемётами и
-          Мульти-Мельтами. На этих карателей ложится тяжкая ответственность за
+          специализируется на работе с <span class="text-yellow-300">Тяжёлыми Болтерами</span>, <span class="text-yellow-300">Огнемётами</span> и <span class="text-yellow-300">Мульти-Мельтами</span>. На этих карателей ложится тяжкая ответственность за
           оказание прицельной огневой поддержки их наступающим сёстрам. Несмотря
           на их бронебойность и сильное влияние на исход боя, они являются
-          одними из самых уравновешенных и невозмутимых воительниц, хоть и не
+          одними из самых <span class="text-red-500">уравновешенных</span> и <span class="text-red-500">невозмутимых</span> воительниц, хоть и не
           менее кровожадных. Учитывая умение Сестёр мастерски определять
           приоритетные цели и слабые места противника, отделение Воздаятельниц,
           с их разрушительным вооружением, делает их ужасающе мощной боевой
           единицей на поле боя.
         </p>
-        <img src="kurgan.png" alt="" />
+        <br></br>
+        <br></br>
+        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto"/>
         <p>
           <span class="text-yellow-300">Сёстры Репентии</span>, однако, не так
           хорошо видны на фоне остальных. Не все сёстры полностью защищены верой
-          от влияния грязных рук Хаоса и холодных сомнений. Репентией может
-          стать любая, вне зависимости от статуса. Задача и смысл жизни Репентий
-          - покаяться за грехи перед Императором, или умереть во имя его славы.
+          от влияния грязных рук <span class="text-purple-500">Хаоса</span> и холодных сомнений. <span class="text-yellow-300">Репентией может
+          стать любая, вне зависимости от статуса.</span> <br></br> Задача и смысл жизни <span class="text-yellow-300">Репентий</span> - покаяться за грехи перед <span class="text-yellow-300">Императором</span>, или умереть во имя его славы.
           Лысые, одетые в лохмотья, с единственным оружием в руках - цепным
           мечом - каждая Репентия рвётся в бой с ощущением, что она подвела
-          своих сестёр, свой орден и Императора лично. Репентии известны тем,
+          своих сестёр, свой орден и <span class="text-yellow-300">Императора</span> лично. <br></br><span class="text-yellow-300">Репентии</span> известны тем,
           что на поле боя ведут себя невероятно агрессивно. Они не заботятся о
           собственной жизни - они существуют ради искупления и убийств врагов
           своей веры, поэтому рвутся в самую гущу битвы, лишь бы убить как можно
