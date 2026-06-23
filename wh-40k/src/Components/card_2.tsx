@@ -1,4 +1,4 @@
-import { JSX, JSXElement } from "solid-js";
+import { createSignal, JSX, JSXElement } from "solid-js";
 
 export default function Card_2(
   props: JSX.HTMLAttributes<HTMLDivElement> & {
@@ -10,6 +10,8 @@ export default function Card_2(
     onBuy: () => void;
   },
 ): JSXElement {
+  let [bought, setBought] = createSignal(false);
+
   return (
     <div
       class={
@@ -31,7 +33,18 @@ export default function Card_2(
       </span>
       <div class="flex w-full px-5 justify-between items-center">
         <span class="text-xl">{props.price}</span>
-        <button onClick={props.onBuy} class="text-5xl">+</button>
+        <button
+          onClick={() => {
+            props.onBuy();
+            setBought(true);
+            setTimeout(() => {
+              setBought(false);
+            }, 500);
+          }}
+          class={"text-5xl" + " " + (bought() ? "text-accent" : "")}
+        >
+          +
+        </button>
       </div>
     </div>
   );
