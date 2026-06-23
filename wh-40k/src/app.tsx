@@ -15,9 +15,7 @@ export default function App() {
         id="sanctuary"
         class="mb-4 -m-2 text-4xl h-[7em] flex items-center justify-center bg-[url('dev.png')] bg-position-[center_top_-7rem]"
       >
-        <span class="w-min text-center font-bold italic text-glow tracking-widest font-spectral-cs text-6xl">Adepta Sororitas </span> 
-        <br></br>
-        <span class="w-min text-center font-medium text-glow tracking-widest font-spectral-cs text-6xl">✟</span>
+        <span class="w-min text-center font-bold italic text-glow tracking-widest font-spectral-cs text-5xl">Adepta Sororitas <span class="font-medium">✟</span></span> 
         
       </header>
       {/* хернюшки красные */}
