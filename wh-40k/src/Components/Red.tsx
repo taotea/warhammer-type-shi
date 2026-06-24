@@ -17,7 +17,7 @@ export default function Red(
         props.class
       }
     >
-      <img src={props.imgSrc} alt={props.imgAlt} class="mb-1.5 mx-auto block" />
+      <img src={props.imgSrc} alt={props.imgAlt} class="mt-3 mx-auto block" />
       <span class="mb-2 block font-spectral-cs text-2xl font-bold">{props.name}</span>
       <span class="mb-9 block text-1xl font-italic text-glow">{props.definition}</span>
     </div>
