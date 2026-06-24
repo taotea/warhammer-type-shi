@@ -127,7 +127,7 @@ export default function App() {
         <p class="my-30 text-center text-5xl font-spectral-cs">
           Наш ассортимент:
         </p>
-        <div class="flex flex-col gap-2 lg:grid lg:grid-col-2 lg:w-250 lg:m-auto lg:gap-35">
+        <div class="flex flex-col gap-2 md:grid md:grid-col-2 md:w-250 md:m-auto md:gap-35">
           <Card_2
             class="col-start-1"
             name="Худи с капюшоном, вышивка Fleur de Lys"
@@ -299,7 +299,7 @@ export default function App() {
         <br></br>
         <p>Основными Дочерними Орденами являются:</p>
         <br></br>
-        <div class="flex flex-col items-center mb-30 gap-5 lg:grid lg:grid-col-2 lg:gap-5 lg:w-150 lg:m-auto">
+        <div class="flex flex-col items-center mb-30 gap-5 lg:grid lg:grid-col-2 lg:gap-5 lg:w-100% lg:m-auto">
           <Order
             class="col-start-1"
             name={"Our Martyred Lady -\nФанатизм"}
