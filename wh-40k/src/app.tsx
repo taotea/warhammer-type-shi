@@ -35,7 +35,7 @@ export default function App() {
     <main class="w-full h-full text-base bg-dark text-light p-2">
       <header
         id="sanctuary"
-        class="mb-4 -m-2 text-5xl h-[7em] flex items-center justify-center bg-[url('dev.png')] bg-position-[center_top_-7rem]"
+        class="mb-4 -m-2 text-5xl h-[7em] flex items-center justify-center bg-[url('header.png')] bg-position-[center_top_-7rem]"
         use:revealOnScroll
       >
         <span class="w-min text-center lg:whitespace-nowrap font-bold italic text-glow tracking-widest font-spectral-cs lg:text-6xl xl:text-8xl">
@@ -232,10 +232,10 @@ export default function App() {
       {/* Лор */}
       <div
         id="lore"
-        class="bg-red rounded-xl -mx-2 p-2 lg:w-1/2 lg:m-auto lg:p-10 transition-all"
+        class="bg-red rounded-xl -mx-2 p-2 lg:w-1/2 lg:m-auto lg:p-10 transition-all text-justify"
         use:revealOnScroll
       >
-        <div class="bg-secondary text-center p-8 text-3xl/13 -m-2 semibold-italic">
+        <div class="bg-secondary text-center p-8 text-3xl/13 -m-2 semibold-italic lg:-m-10 lg:mb-0">
           <span class="text-yellow-300">†</span>{" "}
           <span class="font-spectral-cs text-5xl">
             "Вера - наш щит. Ярость - наше оружие."
@@ -243,9 +243,9 @@ export default function App() {
           <span class="text-yellow-300">†</span>
         </div>
         <br></br>
-        <img src="soldier-1.png" alt="" class="m-auto lg:w-250" />
+        <img src="soldier-1.png" alt="" class="m-auto lg:w-250 lg:m-4" />
         <br></br>
-        <p class="text-center">
+        <p class="">
           <span class="text-yellow-300">Adepta Sororitas</span>, еще называемые{" "}
           <span class="text-yellow-300">Сёстрами Битвы</span> - женское воинство
           Экклезиархии, элита Империума, “Святое Войско”. НЕ путать с
@@ -265,9 +265,9 @@ export default function App() {
         <img
           src="soldier-2.png"
           alt=""
-          class="lg:ml-4 lg:w-120 lg:float-left lg:h-65"
+          class="lg:ml-4 lg:w-120 lg:float-left lg:h-65 lg:m-4"
         />
-        <p class="text-center text-md lg:text-right">
+        <p class="text-md lg:ml-4">
           Как и космодесант, Сёстры любят оружие помощнее и побольше. Их
           излюбленные оружия, ласково называемые “троицей”:{" "}
           <span class="text-yellow-300">Мельта</span> (плазма),
@@ -277,8 +277,8 @@ export default function App() {
           борту.
         </p>
         <br></br>
-        <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto lg:mt-10" />
-        <p class="ml-4 text-center lg:mt-23">
+        <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto lg:mt-10 lg:m-4" />
+        <p class="ml-4  lg:mt-23">
           <span class="text-yellow-300 font-medium italic">
             “Враги Императора настолько осквернены, что не замечают ужаса и
             ущербности своих собственных жалких жизней. Убийство настолько
@@ -342,8 +342,8 @@ export default function App() {
             }
           />
         </div>
-        <img src="simbol.png" alt="" class="lg:float-right lg:ml-10 lg:w-85 lg:mt-5 m-auto"/>
-        <p class="text-center lg:mt-15">
+        <img src="simbol.png" alt="" class="lg:float-right lg:ml-10 lg:w-85 lg:mt-5 m-auto lg:m-4"/>
+        <p class=" lg:mt-15">
           Символ Ордена - <span class="text-yellow-300">Fleur de Lys</span>{" "}
           (Лилия), означающая чистоту и жертвенность. Сам по себе символ крайне
           известен. В истории он традиционно ассоциировался с французской
@@ -351,7 +351,7 @@ export default function App() {
           40K его в основном ассоциируют именно с Сёстрами Битвы.
         </p>
         <img src="serafim.png" alt="" class="lg:ml-4 lg:w-100 lg:float-right lg:h-50 lg:mt-10 lg:mr-15 m-auto"/>
-        <p class="lg:ml-2 text-center lg:mt-10">
+        <p class="lg:ml-2  lg:mt-10">
           Войска Сестёр Битвы тоже по-своему разнообразны.{" "}
           <span class="text-yellow-300">Серафимы</span>, например, являются
           элитными войсками, чья задача - нападать с небес на прыжковых ранцах.
@@ -363,7 +363,7 @@ export default function App() {
           alt=""
           class="lg:w-80 lg:float-left lg:h-90 m-auto lg:mt-10"
         />
-        <p class="lg:text-end text-center lg:mt-10">
+        <p class="lg:text-end  lg:mt-10">
           <span class="text-yellow-300">Воздаятельницы</span> - безумно
           интересная часть Адепта. Их рутина по выкашиванию ереси
           специализируется на работе с{" "}
@@ -380,8 +380,8 @@ export default function App() {
           с их разрушительным вооружением, делает их ужасающе мощной боевой
           единицей на поле боя.
         </p>
-        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto lg:h-85 lg:mt-30"/>
-        <p class="lg:mt-30 text-center">
+        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto lg:h-85 lg:mt-20 lg:ml-4"/>
+        <p class="lg:mt-30 ">
           <span class="text-yellow-300">Сёстры Репентии</span>, однако, не так
           хорошо видны на фоне остальных. Не все сёстры полностью защищены верой
           от влияния грязных рук <span class="text-purple-500">Хаоса</span> и
@@ -405,12 +405,12 @@ export default function App() {
       </div>
       {/* Обратная связь */}
       <div
-        class="bg-linear-to-b from-[#433434] to-[#A98383] p-2 m-2 rounded-2xl"
+        class="bg-linear-to-b from-[#433434] to-[#A98383] p-2 m-2 rounded-2xl lg:w-1/2 mx-auto"
         id="puhelinnumero"
         use:revealOnScroll
       >
         <span class="font-spectral-cs">
-          <p class="text-center">ОБРАТНАЯ СВЯЗЬ</p>
+          <p class="">ОБРАТНАЯ СВЯЗЬ</p>
           <p>Почта: defaduptus@gmail.com</p>
           <p>Телефон: +79989483645</p>
           <p>Telegram: @killyourself_dept</p>
