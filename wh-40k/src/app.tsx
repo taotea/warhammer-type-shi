@@ -1,4 +1,4 @@
-import { createEffect, createSignal, For, Show } from "solid-js";
+import { createSignal, For, Show } from "solid-js";
 import "./app.css";
 import Card_1 from "./Components/card_1";
 import Card_2 from "./Components/card_2";
@@ -7,6 +7,7 @@ import Red from "./Components/Red";
 import { Motion, Presence } from "solid-motionone";
 import { createStore } from "solid-js/store";
 import Product from "./Types/product";
+import revealOnScroll from "~/Directives/revealOnScroll";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = createSignal(false);
@@ -35,13 +36,14 @@ export default function App() {
       <header
         id="sanctuary"
         class="mb-4 -m-2 text-5xl h-[7em] flex items-center justify-center bg-[url('dev.png')] bg-position-[center_top_-7rem]"
+        use:revealOnScroll
       >
         <span class="w-min text-center lg:whitespace-nowrap font-bold italic text-glow tracking-widest font-spectral-cs lg:text-8xl">
           Adepta Sororitas <span class="font-medium">✟</span>
         </span>
       </header>
       {/* хернюшки красные */}
-      <div class="grid auto-rows-fr auto-cols-fr mb-14 lg:flex lg:items-center lg:justify-center lg:gap-2">
+      <div class="grid auto-rows-fr auto-cols-fr mb-14 lg:flex lg:items-center lg:justify-center lg:gap-2" use:revealOnScroll>
         <Red
           class={"row-start-1"}
           name="Ритуальные одежды"
@@ -95,9 +97,9 @@ export default function App() {
           imgAlt="kurwa"
           onBuy={() => {
             setCart(cart.length, {
-              name: "“Вера и Пламя”\n“Молот и Наковальня”",
-              definition: "Дуо культовых книг за авторством Джеймса Сваллоу",
-              price: 59.99,
+              name: "Печать чистоты \n “Адепта Сороритас”",
+              definition: "Культовая печать с Лилией и молитвами",
+              price: 39.99,
             });
           }}
         />
@@ -109,16 +111,16 @@ export default function App() {
           imgAlt="kurwa"
           onBuy={() => {
             setCart(cart.length, {
-              name: "“Вера и Пламя”\n“Молот и Наковальня”",
-              definition: "Дуо культовых книг за авторством Джеймса Сваллоу",
-              price: 59.99,
+              name: "Реликвалий Болтера",
+              definition: "Кулон с гильзой от болтера",
+              price: 9.99,
             });
           }}
         />
       </div>
-      
+
       {/* Наш ассортимент: */}
-      <div id="catalogue" class="lg:text-center">
+      <div id="catalogue" class="lg:text-center" use:revealOnScroll>
         <p class="my-30 text-center text-5xl font-spectral-cs">
           Наш ассортимент:
         </p>
@@ -225,8 +227,12 @@ export default function App() {
       <br></br>
 
       {/* Лор */}
-      <div id="lore" class="bg-red rounded-xl lg:w-1/2 lg:m-auto lg:p-10">
-        <div class="bg-secondary -mx-2 text-center p-8 text-3xl/13 semibold-italic">
+      <div
+        id="lore"
+        class="bg-red rounded-xl -mx-2 p-2 lg:w-1/2 lg:m-auto lg:p-10 transition-all"
+        use:revealOnScroll
+      >
+        <div class="bg-secondary text-center p-8 text-3xl/13 -m-2 semibold-italic">
           <span class="text-yellow-300">†</span>{" "}
           <span class="font-spectral-cs">
             "Вера - наш щит. Ярость - наше оружие."
@@ -234,17 +240,18 @@ export default function App() {
           <span class="text-yellow-300">†</span>
         </div>
         <br></br>
-        <img src="soldier-1.png" alt="" class="m-auto lg:w-250"/>
+        <img src="soldier-1.png" alt="" class="m-auto lg:w-250" />
         <br></br>
         <p class="text-center">
           <span class="text-yellow-300">Adepta Sororitas</span>, еще называемые{" "}
           <span class="text-yellow-300">Сёстрами Битвы</span> - женское воинство
           Экклезиархии, элита Империума, “Святое Войско”. НЕ путать с
-          <span class="text-red-500"> Космодесантниками</span>, Сёстры - это иная
-          фракция, которая не подчиняется Астартес. После восстания Себастьяна
-          Тора, указом <span class="text-yellow-300">Императора</span> было
-          запрещено содержать мужские армии под контролем Церкви. Но правилами
-          не запрещено было создавать женские боевые ордена. Сёстры - это живое
+          <span class="text-red-500"> Космодесантниками</span>, Сёстры - это
+          иная фракция, которая не подчиняется Астартес. После восстания
+          Себастьяна Тора, указом{" "}
+          <span class="text-yellow-300">Императора</span> было запрещено
+          содержать мужские армии под контролем Церкви. Но правилами не
+          запрещено было создавать женские боевые ордена. Сёстры - это живое
           воплощение фанатичной веры в Бога-Императора, которая способна
           вычищать целые полчища еретиков одними только молитвами. Их вера
           защищает их от ранений. Их молитвы способны противостоять демонам
@@ -252,7 +259,11 @@ export default function App() {
           врага.
         </p>
         <br></br>
-        <img src="soldier-2.png" alt="" class="lg:ml-4 lg:w-120 lg:float-left lg:h-65" />
+        <img
+          src="soldier-2.png"
+          alt=""
+          class="lg:ml-4 lg:w-120 lg:float-left lg:h-65"
+        />
         <p class="text-center text-md lg:text-right">
           Как и космодесант, Сёстры любят оружие помощнее и побольше. Их
           излюбленные оружия, ласково называемые “троицей”:{" "}
@@ -263,7 +274,7 @@ export default function App() {
           борту.
         </p>
         <br></br>
-        <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto"/>
+        <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto" />
         <p class="">
           <span class="text-yellow-300 font-medium italic">
             “Враги Императора настолько осквернены, что не замечают ужаса и
@@ -308,7 +319,7 @@ export default function App() {
         </div>
         <br></br>
         <br></br>
-        <img src="simbol.png" alt="" class="lg:float-right m-auto"/>
+        <img src="simbol.png" alt="" class="lg:float-right m-auto" />
         <p>
           Символ Ордена - <span class="text-yellow-300">Fleur de Lys</span>{" "}
           (Лилия), означающая чистоту и жертвенность. Сам по себе символ крайне
@@ -319,7 +330,7 @@ export default function App() {
         <br></br>
         <br></br>
         <br></br>
-        <img src="serafim.png" alt="" class="lg:w-85 lg:float-right"/>
+        <img src="serafim.png" alt="" class="lg:w-85 lg:float-right" />
         <p>
           Войска Сестёр Битвы тоже по-своему разнообразны.{" "}
           <span class="text-yellow-300">Серафимы</span>, например, являются
@@ -329,14 +340,23 @@ export default function App() {
         </p>
         <br></br>
         <br></br>
-        <img src="retr.png" alt="" class="lg:w-80 lg:float-left lg:h-90 m-auto"/>
+        <img
+          src="retr.png"
+          alt=""
+          class="lg:w-80 lg:float-left lg:h-90 m-auto"
+        />
         <p class="lg:text-end">
           <span class="text-yellow-300">Воздаятельницы</span> - безумно
           интересная часть Адепта. Их рутина по выкашиванию ереси
-          специализируется на работе с <span class="text-yellow-300">Тяжёлыми Болтерами</span>, <span class="text-yellow-300">Огнемётами</span> и <span class="text-yellow-300">Мульти-Мельтами</span>. На этих карателей ложится тяжкая ответственность за
-          оказание прицельной огневой поддержки их наступающим сёстрам. Несмотря
-          на их бронебойность и сильное влияние на исход боя, они являются
-          одними из самых <span class="text-red-500">уравновешенных</span> и <span class="text-red-500">невозмутимых</span> воительниц, хоть и не
+          специализируется на работе с{" "}
+          <span class="text-yellow-300">Тяжёлыми Болтерами</span>,{" "}
+          <span class="text-yellow-300">Огнемётами</span> и{" "}
+          <span class="text-yellow-300">Мульти-Мельтами</span>. На этих
+          карателей ложится тяжкая ответственность за оказание прицельной
+          огневой поддержки их наступающим сёстрам. Несмотря на их бронебойность
+          и сильное влияние на исход боя, они являются одними из самых{" "}
+          <span class="text-red-500">уравновешенных</span> и{" "}
+          <span class="text-red-500">невозмутимых</span> воительниц, хоть и не
           менее кровожадных. Учитывая умение Сестёр мастерски определять
           приоритетные цели и слабые места противника, отделение Воздаятельниц,
           с их разрушительным вооружением, делает их ужасающе мощной боевой
@@ -344,16 +364,24 @@ export default function App() {
         </p>
         <br></br>
         <br></br>
-        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto"/>
+        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto" />
         <p>
           <span class="text-yellow-300">Сёстры Репентии</span>, однако, не так
           хорошо видны на фоне остальных. Не все сёстры полностью защищены верой
-          от влияния грязных рук <span class="text-purple-500">Хаоса</span> и холодных сомнений. <span class="text-yellow-300">Репентией может
-          стать любая, вне зависимости от статуса.</span> <br></br> Задача и смысл жизни <span class="text-yellow-300">Репентий</span> - покаяться за грехи перед <span class="text-yellow-300">Императором</span>, или умереть во имя его славы.
-          Лысые, одетые в лохмотья, с единственным оружием в руках - цепным
-          мечом - каждая Репентия рвётся в бой с ощущением, что она подвела
-          своих сестёр, свой орден и <span class="text-yellow-300">Императора</span> лично. <br></br><span class="text-yellow-300">Репентии</span> известны тем,
-          что на поле боя ведут себя невероятно агрессивно. Они не заботятся о
+          от влияния грязных рук <span class="text-purple-500">Хаоса</span> и
+          холодных сомнений.{" "}
+          <span class="text-yellow-300">
+            Репентией может стать любая, вне зависимости от статуса.
+          </span>{" "}
+          <br></br> Задача и смысл жизни{" "}
+          <span class="text-yellow-300">Репентий</span> - покаяться за грехи
+          перед <span class="text-yellow-300">Императором</span>, или умереть во
+          имя его славы. Лысые, одетые в лохмотья, с единственным оружием в
+          руках - цепным мечом - каждая Репентия рвётся в бой с ощущением, что
+          она подвела своих сестёр, свой орден и{" "}
+          <span class="text-yellow-300">Императора</span> лично. <br></br>
+          <span class="text-yellow-300">Репентии</span> известны тем, что на
+          поле боя ведут себя невероятно агрессивно. Они не заботятся о
           собственной жизни - они существуют ради искупления и убийств врагов
           своей веры, поэтому рвутся в самую гущу битвы, лишь бы убить как можно
           больше во славу имени <span class="text-yellow-300">Его</span>.
@@ -366,6 +394,7 @@ export default function App() {
       <div
         class="bg-linear-to-b from-[#433434] to-[#A98383] p-2 m-2 rounded-2xl"
         id="puhelinnumero"
+        use:revealOnScroll
       >
         <span class="font-spectral-cs">
           <p class="text-center">ОБРАТНАЯ СВЯЗЬ</p>

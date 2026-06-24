@@ -15,7 +15,7 @@ export default function Card_2(
   return (
     <div
       class={
-        "m-1 rounded-2xl text-sm bg-gray h-104 flex flex-col items-center text-center p-2 inset-ring-4 inset-ring-(--color-brown) shadow-xl shadow-(--color-brown)-1000" +
+        "m-1 rounded-2xl text-sm bg-gray h-104 flex flex-col items-center text-center p-2 inset-ring-4 inset-ring-brown shadow-xl shadow-(--color-brown)-1000" +
         " " +
         props.class
       }
