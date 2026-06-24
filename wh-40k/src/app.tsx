@@ -274,10 +274,8 @@ export default function App() {
           борту.
         </p>
         <br></br>
-        <br></br>
-        <br></br>
-        <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto" />
-        <p class="ml-4 text-center">
+        <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto lg:mt-10" />
+        <p class="ml-4 text-center lg:mt-23">
           <span class="text-yellow-300 font-medium italic">
             “Враги Императора настолько осквернены, что не замечают ужаса и
             ущербности своих собственных жалких жизней. Убийство настолько
@@ -319,39 +317,28 @@ export default function App() {
             imgAlt="kurwa ya perdole"
           />
         </div>
-        <br></br>
-        <br></br>
-        <img src="simbol.png" alt="" class="lg:float-right lg:ml-10 lg:w-85"/>
-        <p class="text-center">
+        <img src="simbol.png" alt="" class="lg:float-right lg:ml-10 lg:w-85 lg:mt-5 m-auto"/>
+        <p class="text-center lg:mt-15">
           Символ Ордена - <span class="text-yellow-300">Fleur de Lys</span>{" "}
           (Лилия), означающая чистоту и жертвенность. Сам по себе символ крайне
           известен. В истории он традиционно ассоциировался с французской
           монархией, чистотой и королевской властью. Но во вселенной Warhammer
           40K его в основном ассоциируют именно с Сёстрами Битвы.
         </p>
-        <br></br>
-        <br></br>
-        <br></br>
-        <img src="serafim.png" alt="" class="lg:ml-4 lg:w-120 lg:float-right lg:h-50 mt-10"/>
-        <p class="lg:ml-2 text-center mt-20">
+        <img src="serafim.png" alt="" class="lg:ml-4 lg:w-100 lg:float-right lg:h-50 lg:mt-10 lg:mr-15 m-auto"/>
+        <p class="lg:ml-2 text-center lg:mt-10">
           Войска Сестёр Битвы тоже по-своему разнообразны.{" "}
           <span class="text-yellow-300">Серафимы</span>, например, являются
           элитными войсками, чья задача - нападать с небес на прыжковых ранцах.
           Их цель - устрашать врага внезапным появлением, давая другим отрядам
           сестёр окно для стрельбы на поражение.
         </p>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <img
           src="retr.png"
           alt=""
-          class="lg:w-80 lg:float-left lg:h-90 m-auto"
+          class="lg:w-80 lg:float-left lg:h-90 m-auto lg:mt-10"
         />
-        <p class="lg:text-end">
+        <p class="lg:text-end text-center lg:mt-10">
           <span class="text-yellow-300">Воздаятельницы</span> - безумно
           интересная часть Адепта. Их рутина по выкашиванию ереси
           специализируется на работе с{" "}
@@ -368,12 +355,8 @@ export default function App() {
           с их разрушительным вооружением, делает их ужасающе мощной боевой
           единицей на поле боя.
         </p>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto lg:h-85"/>
-        <p class="mt-5">
+        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto lg:h-85 lg:mt-30"/>
+        <p class="lg:mt-30 text-center">
           <span class="text-yellow-300">Сёстры Репентии</span>, однако, не так
           хорошо видны на фоне остальных. Не все сёстры полностью защищены верой
           от влияния грязных рук <span class="text-purple-500">Хаоса</span> и
@@ -395,9 +378,6 @@ export default function App() {
           больше во славу имени <span class="text-yellow-300">Его</span>.
         </p>
       </div>
-      <br></br>
-      <br></br>
-
       {/* Обратная связь */}
       <div
         class="bg-linear-to-b from-[#433434] to-[#A98383] p-2 m-2 rounded-2xl"
