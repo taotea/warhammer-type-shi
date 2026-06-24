@@ -38,7 +38,7 @@ export default function App() {
         class="mb-4 -m-2 text-5xl h-[7em] flex items-center justify-center bg-[url('dev.png')] bg-position-[center_top_-7rem]"
         use:revealOnScroll
       >
-        <span class="w-min text-center lg:whitespace-nowrap font-bold italic text-glow tracking-widest font-spectral-cs lg:text-8xl">
+        <span class="w-min text-center lg:whitespace-nowrap font-bold italic text-glow tracking-widest font-spectral-cs lg:text-6xl xl:text-8xl">
           Adepta Sororitas <span class="font-medium">✟</span>
         </span>
       </header>
