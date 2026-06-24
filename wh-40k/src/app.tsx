@@ -327,7 +327,7 @@ export default function App() {
             imgAlt="kurwa ya perdole"
             onClick={() => {
               window.location.href =
-                "https://warhammer40k.fandom.com/ru/wiki/%D0%9E%D1%80%D0%B4%D0%B5%D0%BD_%D0%91%D0%B5%D0%BB%D0%BE%D0%B9_%D0%A0%D0%BE%D0%B7%D1%8B";
+                "https://warhammer40k.fandom.com/ru/wiki/%D0%9E%D1%80%D0%B4%D0%B5%D0%BD_%D0%A1%D0%B2%D1%8F%D1%89%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D0%B7%D1%8B";
               console.log("kurwa")
             }}
           />
