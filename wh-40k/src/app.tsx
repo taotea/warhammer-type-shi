@@ -32,6 +32,14 @@ export default function App() {
     }
   };
 
+  const getFallbackText = () => {
+  const random = Math.floor(Math.random() * 3) + 1; 
+  if (random === 1) {
+    return "но никто не пришёл.";
+  }
+  return "Здесь ничего нет";
+  };
+  
   return (
     <main class="w-full h-full text-base bg-dark text-light p-2">
       <header
@@ -433,10 +441,12 @@ export default function App() {
           <p>Телефон: +79989483645</p>
           <p>Telegram: @killyourself_dept</p>
         </span>
-        <p>======================================</p>
-        <p>
+        <p class="text-center">======================================</p>
+        <p class="text-black font-spectral-cs text-center">
           Возникли проблемы во время или после покупки? Напишите нам и
-          расскажите свою проблему! Также разрешается предлагать идеи для
+          расскажите свою проблему! 
+          <br></br>
+          Также разрешается предлагать идеи для
           дополнения страницы с лором. Ну, так, на всякий случай.
         </p>
       </div>
@@ -514,7 +524,7 @@ export default function App() {
                   each={groupedCart()}
                   fallback={
                     <p class="text-center text-gray-400 py-6 font-spectral-cs italic text-lg">
-                      Здесь ничего нет
+                      {getFallbackText()}
                     </p>
                   }
                 >
