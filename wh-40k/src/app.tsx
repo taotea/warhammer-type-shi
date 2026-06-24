@@ -435,14 +435,14 @@ export default function App() {
         id="puhelinnumero"
         use:revealOnScroll
       >
-        <span class="font-spectral-cs">
+        <span class="font-spectral-cs text-center text-2xl">
           <p class="">ОБРАТНАЯ СВЯЗЬ</p>
           <p>Почта: defaduptus@gmail.com</p>
           <p>Телефон: +79989483645</p>
           <p>Telegram: @killyourself_dept</p>
         </span>
         <p class="text-center">======================================</p>
-        <p class="text-black font-spectral-cs text-center">
+        <p class="text-black font-spectral-cs text-center text-2xl">
           Возникли проблемы во время или после покупки? Напишите нам и
           расскажите свою проблему! 
           <br></br>
