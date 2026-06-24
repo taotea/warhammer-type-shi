@@ -43,7 +43,10 @@ export default function App() {
         </span>
       </header>
       {/* хернюшки красные */}
-      <div class="grid auto-rows-fr auto-cols-fr mb-14 lg:flex lg:items-center lg:justify-center lg:gap-2" use:revealOnScroll>
+      <div
+        class="grid auto-rows-fr auto-cols-fr mb-14 lg:flex lg:items-center lg:justify-center lg:gap-2"
+        use:revealOnScroll
+      >
         <Red
           class={"row-start-1"}
           name="Ритуальные одежды"
@@ -287,8 +290,13 @@ export default function App() {
             человечества и не думайте о врагах, которых вы убиваете, ни в каком
             другом ключе, кроме как о жертвах во имя Его вечной славы.”
           </span>{" "}
-          - <span class="text-yellow-200"> Святая Целестина</span>, “Размышления
-          о природе праведного возмездия”
+          -{" "}
+          <span class="text-yellow-200">
+            <a href="https://warhammer40k.fandom.com/ru/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%B0%D1%8F_%D0%A6%D0%B5%D0%BB%D0%B5%D1%81%D1%82%D0%B8%D0%BD%D0%B0">
+              Святая Целестина
+            </a>
+          </span>
+          , “Размышления о природе праведного возмездия”
         </p>
         <br></br>
         <p>Основными Дочерними Орденами являются:</p>
@@ -299,29 +307,46 @@ export default function App() {
             name={"Our Martyred Lady -\nФанатизм"}
             imgSrc="martyred-lady.png"
             imgAlt="kurwa ya perdole"
+            on:click={() =>
+              (window.location.href =
+                "https://warhammer40k.fandom.com/ru/wiki/%D0%9E%D1%80%D0%B4%D0%B5%D0%BD_%D0%9F%D1%80%D0%B5%D1%81%D0%B2%D1%8F%D1%82%D0%BE%D0%B9_%D0%94%D0%B5%D0%B2%D1%8B-%D0%9C%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%86%D1%8B")
+            }
           />
           <Order
             class="col-start-2"
             name={"Ebon Chalice -\nЧистота"}
             imgSrc="ebon.png"
             imgAlt="kurwa ya perdole"
+            on:click={() =>
+              (window.location.href =
+                "https://warhammer40k.fandom.com/ru/wiki/%D0%9E%D1%80%D0%B4%D0%B5%D0%BD_%D0%AD%D0%B1%D0%B5%D0%BD%D0%BE%D0%B2%D0%BE%D0%B9_%D0%A7%D0%B0%D1%88%D0%B8")
+            }
           />
           <Order
             class="col-start-1"
             name={"Sacred Rose -\nСпокойствие"}
             imgSrc="sacred-rose.png"
             imgAlt="kurwa ya perdole"
+            onClick={() => {
+              window.location.href =
+                "https://warhammer40k.fandom.com/ru/wiki/%D0%9E%D1%80%D0%B4%D0%B5%D0%BD_%D0%91%D0%B5%D0%BB%D0%BE%D0%B9_%D0%A0%D0%BE%D0%B7%D1%8B";
+              console.log("kurwa")
+            }}
           />
           <Order
             class="col-start-2"
             name={"Bloody Rose -\nЯрость"}
             imgSrc="bloody-rose.png"
             imgAlt="kurwa ya perdole"
+            on:click={() =>
+              (window.location.href =
+                "https://warhammer40k.fandom.com/ru/wiki/%D0%9E%D1%80%D0%B4%D0%B5%D0%BD_%D0%9A%D1%80%D0%BE%D0%B2%D0%B0%D0%B2%D0%BE%D0%B9_%D0%A0%D0%BE%D0%B7%D1%8B")
+            }
           />
         </div>
         <br></br>
         <br></br>
-        <img src="simbol.png" alt="" class="lg:float-right lg:ml-10 lg:w-85"/>
+        <img src="simbol.png" alt="" class="lg:float-right lg:ml-10 lg:w-85" />
         <p class="text-center">
           Символ Ордена - <span class="text-yellow-300">Fleur de Lys</span>{" "}
           (Лилия), означающая чистоту и жертвенность. Сам по себе символ крайне
@@ -332,7 +357,11 @@ export default function App() {
         <br></br>
         <br></br>
         <br></br>
-        <img src="serafim.png" alt="" class="lg:ml-4 lg:w-120 lg:float-right lg:h-50 mt-10"/>
+        <img
+          src="serafim.png"
+          alt=""
+          class="lg:ml-4 lg:w-120 lg:float-right lg:h-50 mt-10"
+        />
         <p class="lg:ml-2 text-center mt-20">
           Войска Сестёр Битвы тоже по-своему разнообразны.{" "}
           <span class="text-yellow-300">Серафимы</span>, например, являются
@@ -372,7 +401,11 @@ export default function App() {
         <br></br>
         <br></br>
         <br></br>
-        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto lg:h-85"/>
+        <img
+          src="repent.png"
+          alt=""
+          class="lg:w-75 lg:float-right m-auto lg:h-85"
+        />
         <p class="mt-5">
           <span class="text-yellow-300">Сёстры Репентии</span>, однако, не так
           хорошо видны на фоне остальных. Не все сёстры полностью защищены верой

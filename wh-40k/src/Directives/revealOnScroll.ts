@@ -9,8 +9,8 @@ declare module "solid-js" {
 const revealOnScroll = (element: Element, value: true) => {
   element.classList.add(
     "opacity-0",
-    "delay-150",
     "transition",
+    "delay-150",
     "duration-1000",
     "ease-in",
   );

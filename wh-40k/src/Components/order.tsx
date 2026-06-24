@@ -1,3 +1,4 @@
+import { splitProps } from "solid-js";
 import { JSX } from "solid-js/jsx-runtime";
 
 export default function Order(
@@ -7,17 +8,20 @@ export default function Order(
     imgAlt: string;
   },
 ) {
+  const [local, other] = splitProps(props, ["name", "imgSrc", "imgAlt", "class"])
+
   return (
     <div
       class={
-        "m-1 mx-5 rounded-2xl text-sm bg-gray h-55 w-55 gap-3 flex flex-col items-center text-center p-2 pt-0" +
+        "m-1 mx-5 rounded-2xl text-sm bg-gray h-55 w-55 gap-3 flex flex-col items-center text-center p-2 pt-0 hover:scale-110 transition duration-100 ease-in" +
         " " +
-        props.class
+        local.class
       }
+      {...other}
     >
-      <img class="mb-1.5 w-[75%]" src={props.imgSrc} alt={props.imgAlt} />
+      <img class="mb-1.5 w-[75%]" src={local.imgSrc} alt={local.imgAlt} />
       <span class="mb-1 block whitespace-pre-wrap font-bold text-xl">
-        {props.name}
+        {local.name}
       </span>
     </div>
   );
