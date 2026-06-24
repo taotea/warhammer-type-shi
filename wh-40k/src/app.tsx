@@ -122,7 +122,7 @@ export default function App() {
         <p class="my-30 text-center text-5xl font-spectral-cs">
           Наш ассортимент:
         </p>
-        <div class="flex flex-col gap-2 lg:grid lg:grid-col-2 lg:gap-5 lg:w-250 lg:m-auto lg:gap-35">
+        <div class="flex flex-col gap-2 lg:grid lg:grid-col-2 lg:w-250 lg:m-auto lg:gap-35">
           <Card_2
             class="col-start-1"
             name="Худи с капюшоном, вышивка Fleur de Lys"
@@ -225,7 +225,7 @@ export default function App() {
       <br></br>
 
       {/* Лор */}
-      <div id="lore" class="bg-[#281212] rounded-xl lg:w-1/2 lg:m-auto lg:p-10">
+      <div id="lore" class="bg-red rounded-xl lg:w-1/2 lg:m-auto lg:p-10">
         <div class="bg-secondary -mx-2 text-center p-8 text-3xl/13 semibold-italic">
           <span class="text-yellow-300">†</span>{" "}
           <span class="font-spectral-cs">
