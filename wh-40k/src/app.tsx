@@ -234,7 +234,7 @@ export default function App() {
       >
         <div class="bg-secondary text-center p-8 text-3xl/13 -m-2 semibold-italic">
           <span class="text-yellow-300">†</span>{" "}
-          <span class="font-spectral-cs">
+          <span class="font-spectral-cs text-5xl">
             "Вера - наш щит. Ярость - наше оружие."
           </span>
           <span class="text-yellow-300">†</span>
@@ -274,8 +274,10 @@ export default function App() {
           борту.
         </p>
         <br></br>
+        <br></br>
+        <br></br>
         <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto" />
-        <p class="">
+        <p class="ml-4 text-center">
           <span class="text-yellow-300 font-medium italic">
             “Враги Императора настолько осквернены, что не замечают ужаса и
             ущербности своих собственных жалких жизней. Убийство настолько
@@ -291,7 +293,7 @@ export default function App() {
         <br></br>
         <p>Основными Дочерними Орденами являются:</p>
         <br></br>
-        <div class="flex flex-col items-center mb-30 gap-5 lg:grid lg:grid-col-2 lg:gap-5 lg:w-210 lg:m-auto">
+        <div class="flex flex-col items-center mb-30 gap-5 lg:grid lg:grid-col-2 lg:gap-5 lg:w-150 lg:m-auto">
           <Order
             class="col-start-1"
             name={"Our Martyred Lady -\nФанатизм"}
@@ -319,8 +321,8 @@ export default function App() {
         </div>
         <br></br>
         <br></br>
-        <img src="simbol.png" alt="" class="lg:float-right m-auto" />
-        <p>
+        <img src="simbol.png" alt="" class="lg:float-right lg:ml-10 lg:w-85"/>
+        <p class="text-center">
           Символ Ордена - <span class="text-yellow-300">Fleur de Lys</span>{" "}
           (Лилия), означающая чистоту и жертвенность. Сам по себе символ крайне
           известен. В истории он традиционно ассоциировался с французской
@@ -330,14 +332,18 @@ export default function App() {
         <br></br>
         <br></br>
         <br></br>
-        <img src="serafim.png" alt="" class="lg:w-85 lg:float-right" />
-        <p>
+        <img src="serafim.png" alt="" class="lg:ml-4 lg:w-120 lg:float-right lg:h-50 mt-10"/>
+        <p class="lg:ml-2 text-center mt-20">
           Войска Сестёр Битвы тоже по-своему разнообразны.{" "}
           <span class="text-yellow-300">Серафимы</span>, например, являются
           элитными войсками, чья задача - нападать с небес на прыжковых ранцах.
           Их цель - устрашать врага внезапным появлением, давая другим отрядам
           сестёр окно для стрельбы на поражение.
         </p>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <br></br>
         <br></br>
         <img
@@ -364,8 +370,10 @@ export default function App() {
         </p>
         <br></br>
         <br></br>
-        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto" />
-        <p>
+        <br></br>
+        <br></br>
+        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto lg:h-85"/>
+        <p class="mt-5">
           <span class="text-yellow-300">Сёстры Репентии</span>, однако, не так
           хорошо видны на фоне остальных. Не все сёстры полностью защищены верой
           от влияния грязных рук <span class="text-purple-500">Хаоса</span> и
