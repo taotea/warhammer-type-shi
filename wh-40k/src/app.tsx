@@ -7,6 +7,7 @@ import Red from "./Components/Red";
 import { Motion, Presence } from "solid-motionone";
 import { createStore } from "solid-js/store";
 import Product from "./Types/product";
+import headerImg from "../public/header.png";
 import revealOnScroll from "~/Directives/revealOnScroll";
 
 export default function App() {
@@ -43,7 +44,8 @@ export default function App() {
     <main class="w-full h-full text-base bg-dark text-light p-2">
       <header
         id="sanctuary"
-        class="mb-4 -m-2 text-5xl h-[7em] flex items-center justify-center bg-[url('header.png')] bg-position-[center_top_-7rem]"
+        class="mb-4 -m-2 text-5xl h-[7em] flex items-center justify-center bg-position-[center_top_-7rem]"
+        style={{ "background-image": `url(${headerImg})` }}
         use:revealOnScroll
       >
         <span class="w-min text-center lg:whitespace-nowrap font-bold italic text-glow tracking-widest font-spectral-cs lg:text-6xl xl:text-8xl">
@@ -285,7 +287,11 @@ export default function App() {
           борту.
         </p>
         <br></br>
-        <img src="soldier-3.png" alt="" class="lg:float-right w-100 m-auto lg:mt-10 lg:m-4" />
+        <img
+          src="soldier-3.png"
+          alt=""
+          class="lg:float-right w-100 m-auto lg:mt-10 lg:m-4"
+        />
         <p class="ml-4  lg:mt-23">
           <span class="text-yellow-300 font-medium italic">
             “Враги Императора настолько осквернены, что не замечают ужаса и
@@ -336,7 +342,7 @@ export default function App() {
             onClick={() => {
               window.location.href =
                 "https://warhammer40k.fandom.com/ru/wiki/%D0%9E%D1%80%D0%B4%D0%B5%D0%BD_%D0%A1%D0%B2%D1%8F%D1%89%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9_%D0%A0%D0%BE%D0%B7%D1%8B";
-              console.log("kurwa")
+              console.log("kurwa");
             }}
           />
           <Order
@@ -350,7 +356,11 @@ export default function App() {
             }
           />
         </div>
-        <img src="simbol.png" alt="" class="lg:float-right lg:ml-10 lg:w-85 lg:mt-5 m-auto lg:m-4"/>
+        <img
+          src="simbol.png"
+          alt=""
+          class="lg:float-right lg:ml-10 lg:w-85 lg:mt-5 m-auto lg:m-4"
+        />
         <p class=" lg:mt-15">
           Символ Ордена - <span class="text-yellow-300">Fleur de Lys</span>{" "}
           (Лилия), означающая чистоту и жертвенность. Сам по себе символ крайне
@@ -358,7 +368,11 @@ export default function App() {
           монархией, чистотой и королевской властью. Но во вселенной Warhammer
           40K его в основном ассоциируют именно с Сёстрами Битвы.
         </p>
-        <img src="serafim.png" alt="" class="lg:ml-4 lg:w-100 lg:float-right lg:h-50 lg:mt-10 lg:mr-15 m-auto"/>
+        <img
+          src="serafim.png"
+          alt=""
+          class="lg:ml-4 lg:w-100 lg:float-right lg:h-50 lg:mt-10 lg:mr-15 m-auto"
+        />
         <p class="lg:ml-2  lg:mt-10">
           Войска Сестёр Битвы тоже по-своему разнообразны.{" "}
           <span class="text-yellow-300">Серафимы</span>, например, являются
@@ -388,7 +402,11 @@ export default function App() {
           с их разрушительным вооружением, делает их ужасающе мощной боевой
           единицей на поле боя.
         </p>
-        <img src="repent.png" alt="" class="lg:w-75 lg:float-right m-auto lg:h-85 lg:mt-20 lg:ml-4"/>
+        <img
+          src="repent.png"
+          alt=""
+          class="lg:w-75 lg:float-right m-auto lg:h-85 lg:mt-20 lg:ml-4"
+        />
         <p class="lg:mt-30 ">
           <span class="text-yellow-300">Сёстры Репентии</span>, однако, не так
           хорошо видны на фоне остальных. Не все сёстры полностью защищены верой
