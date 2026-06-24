@@ -299,7 +299,7 @@ export default function App() {
         <br></br>
         <p>Основными Дочерними Орденами являются:</p>
         <br></br>
-        <div class="flex flex-col items-center mb-30 gap-5 lg:grid lg:grid-col-2 lg:gap-5 lg:w-100% lg:m-auto">
+        <div class="flex flex-col items-center mb-30 gap-5 md:grid md:grid-cols-2 md:gap-5 md:w-100% md:m-auto">
           <Order
             class="col-start-1"
             name={"Our Martyred Lady -\nФанатизм"}
