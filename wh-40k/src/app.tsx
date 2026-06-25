@@ -8,7 +8,7 @@ import { Motion, Presence } from "solid-motionone";
 import { createStore } from "solid-js/store";
 import Product from "./Types/product";
 import headerImg from "../public/header.png";
-import revealOnScroll from "~/Directives/revealOnScroll";
+import revealOnScroll from "~/Directives/revealOnScroll"; // НЕ ТРОГАТЬ
 
 export default function App() {
   const [menuOpen, setMenuOpen] = createSignal(false);
