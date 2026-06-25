@@ -27,4 +27,4 @@ gitignore
 .DS_Store
 Thumbs.db
 
-/mnt/HDD/projects/warhammer-type-shi/server.tar.gz
+*.tar.gz
