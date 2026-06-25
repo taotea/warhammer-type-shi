@@ -383,9 +383,9 @@ export default function App() {
         <img
           src="retr.png"
           alt=""
-          class="lg:w-80 lg:float-left lg:h-90 m-auto lg:mt-10"
+          class="lg:w-80 lg:float-left lg:h-90 m-auto lg:mt-10 lg:pr-4"
         />
-        <p class="lg:text-end  lg:mt-10">
+        <p class="lg:mt-10">
           <span class="text-yellow-300">Воздаятельницы</span> - безумно
           интересная часть Адепта. Их рутина по выкашиванию ереси
           специализируется на работе с{" "}
